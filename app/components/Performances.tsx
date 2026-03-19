@@ -21,7 +21,7 @@ const performances = [
     title: 'Solo Performance',
     caption: 'A captivating solo performance, showcasing raw talent and passion.',
     venue: 'The Music Box',
-    imageUrl: '/images/performance2.jpg',
+    imageUrl: '/images/solo.png',
     instagramUrl: 'https://www.instagram.com/p/DScbvrSiIj4/',
   },
 ];

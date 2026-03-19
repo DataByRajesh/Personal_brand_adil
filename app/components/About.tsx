@@ -1,11 +1,19 @@
 
+import Image from 'next/image';
+
 export default function About() {
   return (
     <section id="about" className="py-20 bg-gray-900 text-white">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <img src="/adil-ibnu.jpg" alt="Adil Ibnu" className="rounded-lg shadow-lg" />
+          <div className="relative h-[480px] rounded-lg shadow-lg overflow-hidden">
+            <Image 
+              src="/My img.jpg" 
+              alt="Adil Ibnu with guitar"
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
+            />
           </div>
           <div className="text-center md:text-left">
             <h2 className="text-4xl font-bold mb-6 tracking-tight">About Adil Ibnu</h2>
