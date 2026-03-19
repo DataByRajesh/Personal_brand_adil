@@ -7,7 +7,6 @@ import Services from './components/Services';
 import Performances from './components/Performances';
 import Events from './components/Events';
 import FeaturedVideo from './components/FeaturedVideo';
-import InstagramMedia from './components/InstagramMedia';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -22,7 +21,6 @@ export default function Home() {
       <Performances />
       <Events />
       <FeaturedVideo />
-      <InstagramMedia />
       <Contact />
       <Footer />
     </main>
