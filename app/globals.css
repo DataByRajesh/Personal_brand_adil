@@ -1,0 +1,21 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 220 20% 5%; /* Dark blue-ish black */
+  --foreground: 0 0% 100%; /* White */
+  --accent: 45 80% 55%; /* Gold/yellow */
+  --btn-background: 45 80% 55%;
+  --btn-background-hover: 45 80% 65%;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.text-accent {
+  color: hsl(var(--accent));
+}
