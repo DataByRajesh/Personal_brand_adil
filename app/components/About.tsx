@@ -6,13 +6,12 @@ export default function About() {
     <section id="about" className="py-20 bg-gray-900 text-white">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative h-[480px] rounded-lg shadow-lg overflow-hidden">
+          <div className="relative h-96 rounded-lg shadow-lg overflow-hidden">
             <Image 
-              src="/My img.jpg" 
-              alt="Adil Ibnu with guitar"
+              src="/adil-abnu.jpg" 
+              alt="Adil Ibnu"
               layout="fill"
-              objectFit="cover"
-              objectPosition="center"
+              objectFit="contain"
             />
           </div>
           <div className="text-center md:text-left">

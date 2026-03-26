@@ -1,5 +1,6 @@
-
-import { Instagram, Linkedin } from 'lucide-react';
+"use client";
+import { useState } from 'react';
+import { Instagram, Linkedin, Menu, X } from 'lucide-react';
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -15,6 +16,8 @@ const socialLinks = [
 ];
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <header className="sticky top-0 z-50 bg-black bg-opacity-80 backdrop-blur-sm">
       <div className="container mx-auto px-4">
@@ -29,15 +32,38 @@ export default function Header() {
               </a>
             ))}
           </nav>
-          <div className="flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-4">
             {socialLinks.map((link) => (
               <a key={link.name} href={link.href} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                 <link.icon className="h-5 w-5" />
               </a>
             ))}
           </div>
+          <div className="md:hidden flex items-center">
+            <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-white">
+              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
       </div>
+      {isMenuOpen && (
+        <div className="md:hidden bg-black bg-opacity-95">
+          <nav className="flex flex-col items-center space-y-4 py-8">
+            {navLinks.map((link) => (
+              <a key={link.name} href={link.href} className="text-lg font-medium text-gray-300 hover:text-white transition-colors" onClick={() => setIsMenuOpen(false)}>
+                {link.name}
+              </a>
+            ))}
+            <div className="flex items-center space-x-6 pt-4">
+              {socialLinks.map((link) => (
+                <a key={link.name} href={link.href} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                  <link.icon className="h-6 w-6" />
+                </a>
+              ))}
+            </div>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }

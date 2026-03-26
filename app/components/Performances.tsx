@@ -7,14 +7,14 @@ const performances = [
     title: 'Acoustic Set at The Starlight Lounge',
     caption: 'An intimate evening of original songs and covers, featuring stripped-down versions of my most popular tracks.',
     venue: 'The Starlight Lounge',
-    imageUrl: '/images/performance1.jpg',
+    imageUrl: '/tn_1.png',
     instagramUrl: 'https://www.instagram.com/sot_eventsltd/',
   },
   {
     title: 'Live at the City Music Festival',
     caption: 'Full band performance on the main stage, playing to a packed crowd at the annual city-wide music event.',
     venue: 'City Music Festival',
-    imageUrl: '/images/performance2.jpg',
+    imageUrl: '/tn_2.png',
     instagramUrl: 'https://www.instagram.com/sot_eventsltd/',
   },
   {
@@ -39,7 +39,7 @@ export default function Performances() {
                   src={perf.imageUrl}
                   alt={`Thumbnail for ${perf.title}`}
                   fill
-                  style={{ objectFit: 'cover' }}
+                  style={{ objectFit: 'contain' }}
                   className="group-hover:opacity-90 transition-opacity"
                 />
               </div>
